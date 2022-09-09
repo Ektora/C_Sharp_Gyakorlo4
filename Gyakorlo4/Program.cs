@@ -8,6 +8,13 @@ public class Gyakorlo4
             Rectangle r2 = new Rectangle(35.9, 3.5);
             Console.WriteLine($"{r1.height} {r1.width} {r1.getArea()} {r1.getPerimeter()}");
             Console.WriteLine($"{r2.height} {r2.width} {r2.getArea()} {r2.getPerimeter()}");
+
+            Account Számla = new Account(1122, 20000);
+            Számla.AnnualInterestRate = 4.5;
+            Számla.withdraw(2500);
+            Számla.deposit(3000);
+            Console.WriteLine($"{Számla.Balance} - {Számla.getMonthlyInterestRate()} - {Számla.DateCreated}");
+        
         }
 }
 }
