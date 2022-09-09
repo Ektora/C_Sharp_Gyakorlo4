@@ -1,4 +1,6 @@
 ﻿
+using System.Runtime.CompilerServices;
+
 namespace Gyakorlo4 { 
 public class Gyakorlo4
 {
@@ -14,7 +16,20 @@ public class Gyakorlo4
             Számla.withdraw(2500);
             Számla.deposit(3000);
             Console.WriteLine($"{Számla.Balance} - {Számla.getMonthlyInterestRate()} - {Számla.DateCreated}");
-        
+
+            Fan f1 = new Fan();
+            f1.Speed = Fan.FAST;
+            f1.Radius = 10;
+            f1.Color = "yellow";
+            f1.On = true;
+            Fan f2 = new Fan();
+            f2.Speed = Fan.MEDIUM;
+            f2.Radius = 5;
+            f2.Color = "blue";
+            f2.On = false;
+            Console.WriteLine(f1.ToString());
+            Console.WriteLine(f2.ToString());
+
         }
 }
 }

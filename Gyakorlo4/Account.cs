@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gyakorlo4
 {
-    internal class Account
+     class Account
     {
         private int id;
         private double balance, annualInterestRate;
