@@ -30,6 +30,18 @@ public class Gyakorlo4
             Console.WriteLine(f1.ToString());
             Console.WriteLine(f2.ToString());
 
+            RegularPolygon rp1 = new RegularPolygon();
+            RegularPolygon rp2 = new RegularPolygon(6,4);
+            RegularPolygon rp3 = new RegularPolygon(10, 4, 5.6, 7.8);
+            Console.WriteLine();
+            Console.WriteLine($"Kerület: {rp1.getPerimeter()}, Terület: {rp1.getArea()}");
+            Console.WriteLine($"Kerület: {rp2.getPerimeter()}, Terület: {rp2.getArea()}");
+            Console.WriteLine($"Kerület: {rp3.getPerimeter()}, Terület: {rp3.getArea()}");
+            Console.WriteLine();
+            LinearEquation le = new LinearEquation(7,6,5,5,6,7);
+            Console.WriteLine(le.ToString());
+
+
         }
 }
 }
