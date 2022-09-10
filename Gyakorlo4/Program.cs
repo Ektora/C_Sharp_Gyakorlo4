@@ -40,8 +40,24 @@ public class Gyakorlo4
             Console.WriteLine();
             LinearEquation le = new LinearEquation(7,6,5,5,6,7);
             Console.WriteLine(le.ToString());
-
-
+            Console.WriteLine();
+            Console.WriteLine("Enter the number of rows and columns of the array: ");
+            int row, column;
+            string[] bemenet = Console.ReadLine().Split(' ');
+            row = Convert.ToInt32(bemenet[0]);
+            column = Convert.ToInt32(bemenet[1]);
+            double[,] array = new double[row, column];
+            Console.WriteLine("Enter the array:");
+            for(int i=0; i < row; i++)
+            {
+                bemenet = Console.ReadLine().Split(' ');
+                for(int j = 0; j < column; j++)
+                {
+                    array[i,j] = Convert.ToDouble(bemenet[j]);
+                }
+            }
+            Location l = Location.locateLargest(array);
+            Console.WriteLine($"The location of the largest element is {l.maxValue} at ({l.row},{l.column})");
         }
 }
 }

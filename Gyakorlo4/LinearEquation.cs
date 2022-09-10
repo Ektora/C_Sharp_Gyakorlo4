@@ -33,6 +33,16 @@ namespace Gyakorlo4
             return true;
         }
 
+        private int getX()
+        {
+            return (E * D - B * F) / (A * D - B * C);
+        }
+
+        private int getY()
+        {
+            return (A * F - E * C) / (A * D - B * C);
+        }
+
         public override string ToString()
         {
             int x, y;
@@ -40,9 +50,7 @@ namespace Gyakorlo4
             string eredmeny;
             if (isSolvable())
             {
-                x = (E * D - B * F) / (A * D - B * C);
-                y = (A * F - E * C) / (A * D - B * C);
-                eredmeny = $"x értéke: {x}, y értéke: {y}";
+                eredmeny = $"x értéke: {getX()}, y értéke: {getY()}";
                 return eredmeny;
             }
             return "The equation has no solution";
